@@ -62,5 +62,5 @@ target_link_libraries(qtim-fcitx ${X11_LIBRARIES})
 install(
   TARGETS qtim-fcitx
   LIBRARY DESTINATION
-  "${QT_PLUGINS_DIR}/inputmethods")
+  "${WPS_LIBRARY_DIR}/qt/plugins/inputmethods")
 
