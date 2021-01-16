@@ -57,6 +57,8 @@ target_link_libraries(
   PkgConfig::DBus
   )
 
+target_compile_definitions(qtim-fcitx PRIVATE -DFCITX5_QT_WITH_FCITX_NAME=1)
+
 target_link_libraries(qtim-fcitx ${X11_LIBRARIES})
 
 install(
