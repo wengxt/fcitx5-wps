@@ -45,14 +45,11 @@ generate_export_header(qtim-fcitx BASE_NAME Fcitx5Qt4DBusAddons)
 set_target_properties(qtim-fcitx PROPERTIES
   PREFIX ""
   COMPILE_FLAGS "-fvisibility=hidden"
-  LINK_FLAGS "-Wl,--no-undefined"
   CXX_STANDARD 17
   AUTOMOC TRUE)
 
 target_link_libraries(
   qtim-fcitx
-  "${WPS_LIBRARY_DIR}/libQtCore.so"
-  "${WPS_LIBRARY_DIR}/libQtDBus.so"
   XKBCommon::XKBCommon
   PkgConfig::DBus
   )
