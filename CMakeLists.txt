@@ -15,8 +15,6 @@ find_package(XKBCommon REQUIRED COMPONENTS XKBCommon)
 find_package(X11 REQUIRED)
 find_package(PkgConfig REQUIRED)
 
-pkg_check_modules(DBus REQUIRED IMPORTED_TARGET "dbus-1")
-
 include_directories(
   ${QT_INCLUDE_DIR}
   ${QT_QTCORE_INCLUDE_DIR}
@@ -51,7 +49,6 @@ set_target_properties(qtim-fcitx PROPERTIES
 target_link_libraries(
   qtim-fcitx
   XKBCommon::XKBCommon
-  PkgConfig::DBus
   )
 
 target_compile_definitions(qtim-fcitx PRIVATE -DFCITX5_QT_WITH_FCITX_NAME=1)
